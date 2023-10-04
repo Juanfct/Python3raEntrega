@@ -1,0 +1,46 @@
+{% extends "Appcoder/padre.html" %}
+
+{% load static %}
+
+
+
+{% block titulo %}
+
+BIENVENIDO       
+
+{% endblock %}
+
+{% block descripcion %}
+
+<form action="/Appcoder/resultados/" method="GET"> 
+
+    <p class="masthead-subheading font-weight-light mb-0">
+    </p>
+    </div>
+    </header>
+    
+    <div class="text-center">
+      <form action="/Appcoder/resultados/" method="GET"> 
+        <input type="number" name="camada" id="camada">
+        <input type="submit" value="Buscar" class="btn btn-primary">
+      </form>
+    </div>
+
+</form>     
+<div style="text-align: center;">
+    <p>Estamos buscando la camada: {{camada}}</p>
+
+{% for curso in cursos %}
+
+    <p>Nombre: {{curso.nombre}} //////// Camada: {{curso.camada}}</p>
+</div>
+
+{% endfor %}
+
+
+{% endblock %}
+
+
+
+
+
